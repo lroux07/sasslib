@@ -1,0 +1,56 @@
+// Variables
+
+$colors:(
+    // Couleur primaire:
+    "primary": #326dee,
+
+    // Couleur secondaire:
+    "secondary": #1ac888,
+
+    // Troisième couleur:
+    // accent: #000000,
+
+    "errror": #d32752,
+    "info": #f6c31c
+);
+@debug map-get($colors, "primary");
+
+// Boucle:
+@each $key, $color in $colors {
+    .text-#{$key} {
+        color: $color;
+    }
+}
+
+@for $i from 1 through 9 {
+    
+}
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+$basebase-border-thickness: 1px;
+$basebase-border-thickness: 20px;
+
+// Size
+$base-font-size: 1rem;
+$font-size-sm: 0.75 * $base-font-size;
+
+// Fin des variables
+
+
+.square {
+    border: 2px solid red;
+    height: 200px;
+    width: 200px;
+
+    &__inner {
+        background-color: black;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+h1, p {
+    // color: $primary;
+    font-size: $base-font-size;
+}
